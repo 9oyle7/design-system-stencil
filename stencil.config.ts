@@ -1,7 +1,19 @@
 import { Config } from '@stencil/core';
+import { postcss } from '@stencil/postcss';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
   namespace: 'design-system-stencil',
+  globalStyle: 'src/global/tailwind.css',
+  plugins: [
+    postcss({
+     plugins: [
+        tailwindcss(), 
+        autoprefixer()
+      ],
+    })
+  ],
   outputTargets: [
     {
       type: 'dist',

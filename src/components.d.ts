@@ -5,20 +5,58 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { IconName } from "./icons";
+export { IconName } from "./icons";
 export namespace Components {
+    interface FaIcon {
+        "iconName": IconName;
+        /**
+          * @default 'md'
+         */
+        "iconSize": 'sm' | 'md' | 'lg';
+    }
+    interface ForTesting {
+    }
 }
 declare global {
+    interface HTMLFaIconElement extends Components.FaIcon, HTMLStencilElement {
+    }
+    var HTMLFaIconElement: {
+        prototype: HTMLFaIconElement;
+        new (): HTMLFaIconElement;
+    };
+    interface HTMLForTestingElement extends Components.ForTesting, HTMLStencilElement {
+    }
+    var HTMLForTestingElement: {
+        prototype: HTMLForTestingElement;
+        new (): HTMLForTestingElement;
+    };
     interface HTMLElementTagNameMap {
+        "fa-icon": HTMLFaIconElement;
+        "for-testing": HTMLForTestingElement;
     }
 }
 declare namespace LocalJSX {
+    interface FaIcon {
+        "iconName": IconName;
+        /**
+          * @default 'md'
+         */
+        "iconSize"?: 'sm' | 'md' | 'lg';
+    }
+    interface ForTesting {
+    }
     interface IntrinsicElements {
+        "fa-icon": FaIcon;
+        "for-testing": ForTesting;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "fa-icon": LocalJSX.FaIcon & JSXBase.HTMLAttributes<HTMLFaIconElement>;
+            "for-testing": LocalJSX.ForTesting & JSXBase.HTMLAttributes<HTMLForTestingElement>;
         }
     }
 }

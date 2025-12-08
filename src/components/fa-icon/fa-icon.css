@@ -1,0 +1,30 @@
+:host {
+  display: inline-block;
+  line-height: 0;
+  /* الحجم الافتراضي */
+  font-size: 18px;
+}
+
+/* الغلاف حول الـ svg */
+.fa-wrapper {
+  display: inline-block;
+}
+
+/* خله يعتمد على font-size */
+:host svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* أحجام جاهزة */
+:host(.size-sm) {
+  font-size: 14px;
+}
+
+:host(.size-md) {
+  font-size: 18px;
+}
+
+:host(.size-lg) {
+  font-size: 24px;
+}

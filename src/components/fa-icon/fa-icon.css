@@ -1,8 +1,6 @@
 :host {
   display: inline-block;
-  line-height: 0;
-  /* الحجم الافتراضي */
-  font-size: 18px;
+  line-height: 0
 }
 
 /* الغلاف حول الـ svg */
@@ -14,17 +12,11 @@
 :host svg {
   width: 1em;
   height: 1em;
+  fill: currentColor;
+
 }
 
-/* أحجام جاهزة */
-:host(.size-sm) {
-  font-size: 14px;
-}
-
-:host(.size-md) {
-  font-size: 18px;
-}
-
-:host(.size-lg) {
-  font-size: 24px;
-}
+:host(.size-xs) { font-size: 8px; }
+:host(.size-sm) { font-size: 14px; }
+:host(.size-md) { font-size: 18px; }
+:host(.size-lg) { font-size: 30px; }

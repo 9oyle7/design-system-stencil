@@ -6,14 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { IconName } from "./icons";
+import { AppColor, AppSize } from "./design-system/theme";
 export { IconName } from "./icons";
+export { AppColor, AppSize } from "./design-system/theme";
 export namespace Components {
     interface FaIcon {
+        /**
+          * @default 'default'
+         */
+        "color": AppColor;
         "iconName": IconName;
         /**
           * @default 'md'
          */
-        "iconSize": 'sm' | 'md' | 'lg';
+        "iconSize": AppSize;
     }
     interface ForTesting {
     }
@@ -38,11 +44,15 @@ declare global {
 }
 declare namespace LocalJSX {
     interface FaIcon {
+        /**
+          * @default 'default'
+         */
+        "color"?: AppColor;
         "iconName": IconName;
         /**
           * @default 'md'
          */
-        "iconSize"?: 'sm' | 'md' | 'lg';
+        "iconSize"?: AppSize;
     }
     interface ForTesting {
     }

@@ -53,17 +53,57 @@
 /* 3) نظام [color] و [bg-color] */
 /* ===================== */
 
-[color="primary"]   { color: var(--color-primary); }
-[color="secondary"] { color: var(--color-secondary); }
-[color="success"]   { color: var(--color-success); }
-[color="danger"]    { color: var(--color-danger); }
-[color="warning"]   { color: var(--color-warning); }
-[color="default"]   { color: var(--color-fg-default); }
+[color='primary'] {
+  color: var(--color-primary);
+}
+[color='secondary'] {
+  color: var(--color-secondary);
+}
+[color='success'] {
+  color: var(--color-success);
+}
+[color='danger'] {
+  color: var(--color-danger);
+}
+[color='warning'] {
+  color: var(--color-warning);
+}
+[color='default'] {
+  color: var(--color-fg-default);
+}
 
-[bg-color="primary"]   { background-color: var(--color-primary); }
-[bg-color="secondary"] { background-color: var(--color-secondary); }
-[bg-color="success"]   { background-color: var(--color-success); }
-[bg-color="danger"]    { background-color: var(--color-danger); }
-[bg-color="warning"]   { background-color: var(--color-warning); }
-[bg-color="body"]      { background-color: var(--color-bg-body); }
-[bg-color="surface"]   { background-color: var(--color-bg-surface); }
+[bg-color='primary'] {
+  background-color: var(--color-primary);
+}
+[bg-color='secondary'] {
+  background-color: var(--color-secondary);
+}
+[bg-color='success'] {
+  background-color: var(--color-success);
+}
+[bg-color='danger'] {
+  background-color: var(--color-danger);
+}
+[bg-color='warning'] {
+  background-color: var(--color-warning);
+}
+[bg-color='body'] {
+  background-color: var(--color-bg-body);
+}
+[bg-color='surface'] {
+  background-color: var(--color-bg-surface);
+}
+
+/* ===================== */
+/* تطبيق الألوان على body و html */
+/* ===================== */
+
+html,
+body {
+  background-color: var(--color-bg-body);
+  color: var(--color-fg-default);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}

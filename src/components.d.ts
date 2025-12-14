@@ -23,6 +23,8 @@ export namespace Components {
     }
     interface ForTesting {
     }
+    interface ThemeSwitcher {
+    }
 }
 declare global {
     interface HTMLFaIconElement extends Components.FaIcon, HTMLStencilElement {
@@ -37,9 +39,16 @@ declare global {
         prototype: HTMLForTestingElement;
         new (): HTMLForTestingElement;
     };
+    interface HTMLThemeSwitcherElement extends Components.ThemeSwitcher, HTMLStencilElement {
+    }
+    var HTMLThemeSwitcherElement: {
+        prototype: HTMLThemeSwitcherElement;
+        new (): HTMLThemeSwitcherElement;
+    };
     interface HTMLElementTagNameMap {
         "fa-icon": HTMLFaIconElement;
         "for-testing": HTMLForTestingElement;
+        "theme-switcher": HTMLThemeSwitcherElement;
     }
 }
 declare namespace LocalJSX {
@@ -56,9 +65,12 @@ declare namespace LocalJSX {
     }
     interface ForTesting {
     }
+    interface ThemeSwitcher {
+    }
     interface IntrinsicElements {
         "fa-icon": FaIcon;
         "for-testing": ForTesting;
+        "theme-switcher": ThemeSwitcher;
     }
 }
 export { LocalJSX as JSX };
@@ -67,6 +79,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "fa-icon": LocalJSX.FaIcon & JSXBase.HTMLAttributes<HTMLFaIconElement>;
             "for-testing": LocalJSX.ForTesting & JSXBase.HTMLAttributes<HTMLForTestingElement>;
+            "theme-switcher": LocalJSX.ThemeSwitcher & JSXBase.HTMLAttributes<HTMLThemeSwitcherElement>;
         }
     }
 }

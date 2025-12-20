@@ -36,7 +36,7 @@ export namespace Components {
          */
         "variant": 'solid' | 'outline' | 'ghost' | 'soft' | 'link';
     }
-    interface FaIcon {
+    interface DsIcon {
         /**
           * @default 'default'
          */
@@ -59,11 +59,11 @@ declare global {
         prototype: HTMLDsButtonElement;
         new (): HTMLDsButtonElement;
     };
-    interface HTMLFaIconElement extends Components.FaIcon, HTMLStencilElement {
+    interface HTMLDsIconElement extends Components.DsIcon, HTMLStencilElement {
     }
-    var HTMLFaIconElement: {
-        prototype: HTMLFaIconElement;
-        new (): HTMLFaIconElement;
+    var HTMLDsIconElement: {
+        prototype: HTMLDsIconElement;
+        new (): HTMLDsIconElement;
     };
     interface HTMLForTestingElement extends Components.ForTesting, HTMLStencilElement {
     }
@@ -79,7 +79,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ds-button": HTMLDsButtonElement;
-        "fa-icon": HTMLFaIconElement;
+        "ds-icon": HTMLDsIconElement;
         "for-testing": HTMLForTestingElement;
         "theme-switcher": HTMLThemeSwitcherElement;
     }
@@ -111,7 +111,7 @@ declare namespace LocalJSX {
          */
         "variant"?: 'solid' | 'outline' | 'ghost' | 'soft' | 'link';
     }
-    interface FaIcon {
+    interface DsIcon {
         /**
           * @default 'default'
          */
@@ -128,7 +128,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ds-button": DsButton;
-        "fa-icon": FaIcon;
+        "ds-icon": DsIcon;
         "for-testing": ForTesting;
         "theme-switcher": ThemeSwitcher;
     }
@@ -138,7 +138,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ds-button": LocalJSX.DsButton & JSXBase.HTMLAttributes<HTMLDsButtonElement>;
-            "fa-icon": LocalJSX.FaIcon & JSXBase.HTMLAttributes<HTMLFaIconElement>;
+            "ds-icon": LocalJSX.DsIcon & JSXBase.HTMLAttributes<HTMLDsIconElement>;
             "for-testing": LocalJSX.ForTesting & JSXBase.HTMLAttributes<HTMLForTestingElement>;
             "theme-switcher": LocalJSX.ThemeSwitcher & JSXBase.HTMLAttributes<HTMLThemeSwitcherElement>;
         }

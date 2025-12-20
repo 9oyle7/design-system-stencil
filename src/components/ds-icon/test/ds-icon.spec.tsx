@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { FaIcon } from '../fa-icon';
+import { DsIcon } from '../ds-icon';
 
-describe('fa-icon', () => {
+describe('ds-icon', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [FaIcon],
-      html: `<fa-icon></fa-icon>`,
+      components: [DsIcon],
+      html: `<ds-icon></ds-icon>`,
     });
     expect(page.root).toEqualHtml(`
-      <fa-icon>
+      <ds-icon>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </fa-icon>
+      </ds-icon>
     `);
   });
 });

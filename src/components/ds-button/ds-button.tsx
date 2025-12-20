@@ -19,7 +19,7 @@ export class DsButton {
       <Host
         color={this.color}
         class={{
-          [`size-${this.size}`]: true,      // نفس أسلوبك في fa-icon
+          [`size-${this.size}`]: true,      // نفس أسلوبك في ds-icon
           [`variant-${this.variant}`]: true,
           [`radius-${this.radius}`]: true,
           'is-disabled': this.disabled,

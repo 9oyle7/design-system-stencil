@@ -1,11 +1,11 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('fa-icon', () => {
+describe('ds-icon', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<fa-icon></fa-icon>');
+    await page.setContent('<ds-icon></ds-icon>');
 
-    const element = await page.find('fa-icon');
+    const element = await page.find('ds-icon');
     expect(element).toHaveClass('hydrated');
   });
 });

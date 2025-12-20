@@ -9,7 +9,7 @@
   font-size: var(--ds-font, 18px);
 }
 
-.fa-wrapper {
+.ds-wrapper {
   display: inline-block;
 }
 

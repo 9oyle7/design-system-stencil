@@ -5,11 +5,37 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { AppColor, AppRadius, AppSize } from "./design-system/theme";
 import { IconName } from "./icons";
-import { AppColor, AppSize } from "./design-system/theme";
+export { AppColor, AppRadius, AppSize } from "./design-system/theme";
 export { IconName } from "./icons";
-export { AppColor, AppSize } from "./design-system/theme";
 export namespace Components {
+    interface DsButton {
+        /**
+          * @default 'primary'
+         */
+        "color": AppColor;
+        /**
+          * @default false
+         */
+        "disabled": boolean;
+        /**
+          * @default 'md'
+         */
+        "radius": AppRadius;
+        /**
+          * @default 'md'
+         */
+        "size": AppSize;
+        /**
+          * @default 'button'
+         */
+        "type": 'button' | 'submit' | 'reset';
+        /**
+          * @default 'solid'
+         */
+        "variant": 'solid' | 'outline' | 'ghost' | 'soft' | 'link';
+    }
     interface FaIcon {
         /**
           * @default 'default'
@@ -27,6 +53,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLDsButtonElement extends Components.DsButton, HTMLStencilElement {
+    }
+    var HTMLDsButtonElement: {
+        prototype: HTMLDsButtonElement;
+        new (): HTMLDsButtonElement;
+    };
     interface HTMLFaIconElement extends Components.FaIcon, HTMLStencilElement {
     }
     var HTMLFaIconElement: {
@@ -46,12 +78,39 @@ declare global {
         new (): HTMLThemeSwitcherElement;
     };
     interface HTMLElementTagNameMap {
+        "ds-button": HTMLDsButtonElement;
         "fa-icon": HTMLFaIconElement;
         "for-testing": HTMLForTestingElement;
         "theme-switcher": HTMLThemeSwitcherElement;
     }
 }
 declare namespace LocalJSX {
+    interface DsButton {
+        /**
+          * @default 'primary'
+         */
+        "color"?: AppColor;
+        /**
+          * @default false
+         */
+        "disabled"?: boolean;
+        /**
+          * @default 'md'
+         */
+        "radius"?: AppRadius;
+        /**
+          * @default 'md'
+         */
+        "size"?: AppSize;
+        /**
+          * @default 'button'
+         */
+        "type"?: 'button' | 'submit' | 'reset';
+        /**
+          * @default 'solid'
+         */
+        "variant"?: 'solid' | 'outline' | 'ghost' | 'soft' | 'link';
+    }
     interface FaIcon {
         /**
           * @default 'default'
@@ -68,6 +127,7 @@ declare namespace LocalJSX {
     interface ThemeSwitcher {
     }
     interface IntrinsicElements {
+        "ds-button": DsButton;
         "fa-icon": FaIcon;
         "for-testing": ForTesting;
         "theme-switcher": ThemeSwitcher;
@@ -77,6 +137,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ds-button": LocalJSX.DsButton & JSXBase.HTMLAttributes<HTMLDsButtonElement>;
             "fa-icon": LocalJSX.FaIcon & JSXBase.HTMLAttributes<HTMLFaIconElement>;
             "for-testing": LocalJSX.ForTesting & JSXBase.HTMLAttributes<HTMLForTestingElement>;
             "theme-switcher": LocalJSX.ThemeSwitcher & JSXBase.HTMLAttributes<HTMLThemeSwitcherElement>;

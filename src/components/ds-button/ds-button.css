@@ -1,0 +1,70 @@
+@import '../../design-system/host-color.css';
+@import '../../design-system/host-size.css';
+@import '../../design-system/host-radius.css';
+
+:host {
+  display: inline-block;
+  color: var(--ds-fg, var(--color-fg-default));
+  font-size: var(--ds-font, 16px);
+}
+
+.btn {
+  height: var(--ds-control-h, 38px);
+  padding: 0 var(--ds-pad-x, 14px);
+  border-radius: var(--ds-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.05s ease, opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-button);
+
+  color: inherit;
+  background: transparent;
+}
+
+.btn:active { transform: translateY(1px); }
+
+/* solid */
+:host(.variant-solid) .btn {
+  background: var(--ds-fg, var(--color-primary));
+  color: var(--color-bg-body);
+}
+
+/* outline */
+:host(.variant-outline) .btn {
+  background: transparent;
+  border-color: var(--ds-fg, var(--color-primary));
+  color: var(--ds-fg, var(--color-primary));
+  box-shadow: none;
+}
+
+/* ghost */
+:host(.variant-ghost) .btn {
+  background: transparent;
+  color: var(--ds-fg, var(--color-primary));
+  box-shadow: none;
+}
+
+/* soft (خلفية خفيفة/ناعمة) */
+:host(.variant-soft) .btn {
+  background: rgba(0, 0, 0, 0.06); /* مبدئي */
+  color: var(--ds-fg, var(--color-primary));
+  box-shadow: none;
+}
+
+/* soft في الدارك */
+:host-context(.dark):host(.variant-soft) .btn,
+:host-context(:root.dark):host(.variant-soft) .btn {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* link (زر مثل رابط) */
+:host(.variant-link) .btn {
+  background: transparent;
+  border-color: transparent;
+  padding: 0;                 /* عادة الرابط بدون padding */
+  height: auto;               /* كأنه نص */
+  box-shadow: none;
+  color: var(--ds-fg, var(--color-primary));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

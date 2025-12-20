@@ -1,0 +1,18 @@
+/* src/global/attributes.css */
+
+/* foreground */
+[color='default']   { --ds-fg: var(--color-fg-default); }
+[color='primary']   { --ds-fg: var(--color-primary); }
+[color='secondary'] { --ds-fg: var(--color-secondary); }
+[color='success']   { --ds-fg: var(--color-success); }
+[color='danger']    { --ds-fg: var(--color-danger); }
+[color='warning']   { --ds-fg: var(--color-warning); }
+
+/* background */
+[bg-color='body']    { --ds-bg: var(--color-bg-body); }
+[bg-color='surface'] { --ds-bg: var(--color-bg-surface); }
+[bg-color='primary'] { --ds-bg: var(--color-primary); }
+[bg-color='secondary'] { --ds-bg: var(--color-secondary); }
+[bg-color='success'] { --ds-bg: var(--color-success); }
+[bg-color='danger']  { --ds-bg: var(--color-danger); }
+[bg-color='warning'] { --ds-bg: var(--color-warning); }

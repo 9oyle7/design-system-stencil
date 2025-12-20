@@ -1,0 +1,32 @@
+/* كل المكونات تقدر تستفيد من هذي المتغيرات */
+:host(.size-xs) {
+  --ds-font: 12px;
+  --ds-icon: 14px;
+  --ds-control-h: 28px;
+  --ds-pad-x: 10px;
+  --ds-pad-y: 6px;
+}
+
+:host(.size-sm) {
+  --ds-font: 14px;
+  --ds-icon: 16px;
+  --ds-control-h: 32px;
+  --ds-pad-x: 12px;
+  --ds-pad-y: 8px;
+}
+
+:host(.size-md) {
+  --ds-font: 16px;
+  --ds-icon: 18px;
+  --ds-control-h: 38px;
+  --ds-pad-x: 14px;
+  --ds-pad-y: 10px;
+}
+
+:host(.size-lg) {
+  --ds-font: 18px;
+  --ds-icon: 22px;
+  --ds-control-h: 44px;
+  --ds-pad-x: 16px;
+  --ds-pad-y: 12px;
+}

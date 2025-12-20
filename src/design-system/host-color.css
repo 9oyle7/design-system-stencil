@@ -1,0 +1,8 @@
+:host { --ds-fg: var(--color-fg-default); }
+
+:host([color='default'])   { --ds-fg: var(--color-fg-default); }
+:host([color='primary'])   { --ds-fg: var(--color-primary); }
+:host([color='secondary']) { --ds-fg: var(--color-secondary); }
+:host([color='success'])   { --ds-fg: var(--color-success); }
+:host([color='danger'])    { --ds-fg: var(--color-danger); }
+:host([color='warning'])   { --ds-fg: var(--color-warning); }

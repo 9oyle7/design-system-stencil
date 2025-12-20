@@ -8,3 +8,5 @@ export type AppColor =
   | 'warning';
 
 export type AppSize = 'xs' | 'sm' | 'md' | 'lg';
+
+export type AppRadius = 'none' | 'sm' | 'md' | 'lg';

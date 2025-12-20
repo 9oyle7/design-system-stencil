@@ -1,0 +1,6 @@
+:host { --ds-radius: var(--radius-md); } /* default */
+
+:host(.radius-none) { --ds-radius: var(--radius-none); }
+:host(.radius-sm)   { --ds-radius: var(--radius-sm); }
+:host(.radius-md)   { --ds-radius: var(--radius-md); }
+:host(.radius-lg)   { --ds-radius: var(--radius-lg); }

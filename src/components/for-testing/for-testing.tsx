@@ -9,9 +9,10 @@ export class ForTesting {
   render() {
     return (
       <div>
+        <ds-button>
+        <ds-icon iconName="moon" iconSize="lg" color="danger"></ds-icon>
 
-sssssssssss
-        <ds-icon iconName="coffee" iconSize="xs" color="primary"></ds-icon>
+        </ds-button>
         <ds-icon iconName="coffee" iconSize="xs" color="secondary"></ds-icon>
         <ds-icon iconName="coffee" iconSize="xs" color="success"></ds-icon>
         <ds-icon iconName="coffee" iconSize="xs" color="danger"></ds-icon>

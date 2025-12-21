@@ -12,6 +12,9 @@
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: var(--ds-control-h, 38px);
   padding: 0 var(--ds-pad-x, 14px);
   border-radius: var(--ds-radius);
@@ -54,6 +57,9 @@
   background: rgba(0, 0, 0, 0.06); /* مبدئي */
   color: var(--ds-fg, var(--color-primary));
   box-shadow: none;
+}
+:host(.variant-soft) .btn:hover {
+  background: rgba(108, 38, 38, 1);
 }
 
 /* soft في الدارك */

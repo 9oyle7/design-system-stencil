@@ -8,10 +8,17 @@
     <script type="module" src="/build/design-system-stencil.esm.js"></script>
     <script nomodule src="/build/design-system-stencil.js"></script>
   </head>
-  <body>
-    <theme-switcher></theme-switcher>
-
+  <body class="text-center">
     <for-testing></for-testing>
+
+    <ds-button variant="soft" size="xs"><ds-icon icon-name="coffee" icon-size="xs" color="danger"></ds-icon></ds-button>
+    <ds-button variant="soft" size="sm"><ds-icon icon-name="coffee" icon-size="sm" color="danger"></ds-icon></ds-button>
+    <ds-button variant="soft" size="md"><ds-icon icon-name="coffee" icon-size="md" color="danger"></ds-icon></ds-button>
+    <ds-button variant="soft" size="lg"><ds-icon icon-name="coffee" icon-size="lg" color="danger"></ds-icon></ds-button>
+
+    <h2>Theme-Switcher</h2>
+    <theme-switcher></theme-switcher>
+    <h2>Icons</h2>
     <div>
       <ds-icon icon-name="coffee" icon-size="xs" color="primary"></ds-icon>
       <ds-icon icon-name="coffee" icon-size="xs" color="secondary"></ds-icon>
@@ -36,21 +43,13 @@
       <ds-icon icon-name="coffee" icon-size="lg" color="success"></ds-icon>
       <ds-icon icon-name="coffee" icon-size="lg" color="danger"></ds-icon>
       <ds-icon icon-name="coffee" icon-size="lg" color="warning"></ds-icon>
+      <ds-icon icon-name="sun" icon-size="lg" color="warning"></ds-icon>
+      <ds-icon icon-name="moon" icon-size="lg" color="warning"></ds-icon>
     </div>
-
-    <h1>
-      butttons
-    </h1>
-<!-- زر ناعم -->
-<ds-button  radius="none" >primary</ds-button>
-<ds-button color="success" variant="soft" size="md">إضافة</ds-button>
-
-<!-- زر كرابط -->
-<ds-button color="secondary" variant="link" size="md">عرض الكل</ds-button>
-
-<!-- زر رئيسي -->
-<ds-button color="success" variant="solid" size="lg">تأكيد</ds-button>
-
-
+    <h2>Buttons</h2>
+    <ds-button radius="none">primary</ds-button>
+    <ds-button color="success" variant="soft" size="md">إضافة</ds-button>
+    <ds-button color="secondary" variant="link" size="md">عرض الكل</ds-button>
+    <ds-button color="success" variant="solid" size="lg">تأكيد</ds-button>
   </body>
 </html>

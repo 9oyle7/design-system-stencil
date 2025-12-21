@@ -1,0 +1,12 @@
+:host {
+  font-family: var(--font-sans);
+}
+
+/* فورم كنترولز داخل Shadow ما تورّث تلقائيًا في كثير حالات */
+:host button,
+:host input,
+:host select,
+:host textarea {
+  font: inherit;
+  letter-spacing: inherit;
+}

@@ -21,11 +21,13 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+      copy: [{ src: 'assets' }],
     },
     {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',
       externalRuntime: false,
+      copy: [{ src: 'assets' }],
     },
     {
       type: 'docs-readme',
@@ -33,6 +35,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
+      copy: [{ src: 'assets' }],
     },
   ],
   testing: {

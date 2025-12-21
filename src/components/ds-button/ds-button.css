@@ -1,11 +1,14 @@
 @import '../../design-system/host-color.css';
 @import '../../design-system/host-size.css';
 @import '../../design-system/host-radius.css';
+@import '../../design-system/host-typography.css';
 
 :host {
   display: inline-block;
+  font-family: var(--font-sans);
   color: var(--ds-fg, var(--color-fg-default));
   font-size: var(--ds-font, 16px);
+  font-weight: var(--fw-regular);
 }
 
 .btn {
@@ -16,12 +19,14 @@
   cursor: pointer;
   transition: transform 0.05s ease, opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
   box-shadow: var(--shadow-button);
-
+  font: inherit;
   color: inherit;
   background: transparent;
 }
 
-.btn:active { transform: translateY(1px); }
+.btn:active {
+  transform: translateY(1px);
+}
 
 /* solid */
 :host(.variant-solid) .btn {
@@ -54,15 +59,15 @@
 /* soft في الدارك */
 :host-context(.dark):host(.variant-soft) .btn,
 :host-context(:root.dark):host(.variant-soft) .btn {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* link (زر مثل رابط) */
 :host(.variant-link) .btn {
   background: transparent;
   border-color: transparent;
-  padding: 0;                 /* عادة الرابط بدون padding */
-  height: auto;               /* كأنه نص */
+  padding: 0; /* عادة الرابط بدون padding */
+  height: auto; /* كأنه نص */
   box-shadow: none;
   color: var(--ds-fg, var(--color-primary));
   text-decoration: underline;

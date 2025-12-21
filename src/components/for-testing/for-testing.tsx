@@ -3,14 +3,14 @@ import { Component, h } from '@stencil/core';
 @Component({
   tag: 'for-testing',
   styleUrl: 'for-testing.css',
-  // shadow: true,
+  shadow: true,
 })
 export class ForTesting {
   render() {
     return (
       <div>
 
-
+sssssssssss
         <ds-icon iconName="coffee" iconSize="xs" color="primary"></ds-icon>
         <ds-icon iconName="coffee" iconSize="xs" color="secondary"></ds-icon>
         <ds-icon iconName="coffee" iconSize="xs" color="success"></ds-icon>

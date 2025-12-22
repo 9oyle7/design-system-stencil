@@ -2,54 +2,252 @@
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System – Stencil</title>
+
     <link rel="stylesheet" href="/build/design-system-stencil.css" />
     <script type="module" src="/build/design-system-stencil.esm.js"></script>
     <script nomodule src="/build/design-system-stencil.js"></script>
   </head>
-  <body class="text-center">
-    <for-testing></for-testing>
 
-    <ds-button variant="soft" size="xs"><ds-icon icon-name="coffee" icon-size="xs" color="danger"></ds-icon></ds-button>
-    <ds-button variant="soft" size="sm"><ds-icon icon-name="coffee" icon-size="sm" color="danger"></ds-icon></ds-button>
-    <ds-button variant="soft" size="md"><ds-icon icon-name="coffee" icon-size="md" color="danger"></ds-icon></ds-button>
-    <ds-button variant="soft" size="lg"><ds-icon icon-name="coffee" icon-size="lg" color="danger"></ds-icon></ds-button>
+  <body class="text-center p-8 space-y-20">
+    <!-- ================= Theme ================= -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold">Theme Switcher</h2>
+      <theme-switcher></theme-switcher>
+    </section>
 
-    <h2>Theme-Switcher</h2>
-    <theme-switcher></theme-switcher>
-    <h2>Icons</h2>
-    <div>
-      <ds-icon icon-name="coffee" icon-size="xs" color="primary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="xs" color="secondary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="xs" color="success"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="xs" color="danger"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="xs" color="warning"></ds-icon>
+    <!-- ================= Icons ================= -->
+    <section class="space-y-12">
+      <h2 class="text-2xl font-semibold">Icons</h2>
 
-      <ds-icon icon-name="coffee" icon-size="sm" color="primary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="sm" color="secondary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="sm" color="success"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="sm" color="danger"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="sm" color="warning"></ds-icon>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- XS -->
+        <div class="rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg"  style="color: var(--color-danger)" >Extra Small Icons - xs</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <!-- coffee -->
+            <ds-icon icon-name="coffee" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="xs" color="warning"></ds-icon>
 
-      <ds-icon icon-name="coffee" icon-size="md" color="primary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="md" color="secondary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="md" color="success"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="md" color="danger"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="md" color="warning"></ds-icon>
+            <!-- delete -->
+            <ds-icon icon-name="delete" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="xs" color="warning"></ds-icon>
 
-      <ds-icon icon-name="coffee" icon-size="lg" color="primary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="lg" color="secondary"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="lg" color="success"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="lg" color="danger"></ds-icon>
-      <ds-icon icon-name="coffee" icon-size="lg" color="warning"></ds-icon>
-      <ds-icon icon-name="sun" icon-size="lg" color="warning"></ds-icon>
-      <ds-icon icon-name="moon" icon-size="lg" color="warning"></ds-icon>
-    </div>
-    <h2>Buttons</h2>
-    <ds-button radius="none">primary</ds-button>
-    <ds-button color="success" variant="soft" size="md">إضافة</ds-button>
-    <ds-button color="secondary" variant="link" size="md">عرض الكل</ds-button>
-    <ds-button color="success" variant="solid" size="lg">تأكيد</ds-button>
+            <!-- arrow -->
+            <ds-icon icon-name="arrow-right" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="xs" color="warning"></ds-icon>
+
+            <!-- like -->
+            <ds-icon icon-name="like" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="like" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="like" icon-size="xs" color="warning"></ds-icon>
+
+            <!-- twitter -->
+            <ds-icon icon-name="twitter" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="xs" color="warning"></ds-icon>
+
+            <!-- sun -->
+            <ds-icon icon-name="sun" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="xs" color="warning"></ds-icon>
+
+            <!-- moon -->
+            <ds-icon icon-name="moon" icon-size="xs" color="primary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="xs" color="secondary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="xs" color="success"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="xs" color="danger"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="xs" color="warning"></ds-icon>
+          </div>
+        </div>
+
+        <!-- SM -->
+        <div class="bg-white rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg">Small Icons - sm</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-icon icon-name="coffee" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="sm" color="warning"></ds-icon>
+
+            <ds-icon icon-name="delete" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="sm" color="warning"></ds-icon>
+
+            <ds-icon icon-name="arrow-right" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="sm" color="warning"></ds-icon>
+
+            <ds-icon icon-name="like" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="like" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="like" icon-size="sm" color="warning"></ds-icon>
+
+            <ds-icon icon-name="twitter" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="sm" color="warning"></ds-icon>
+
+            <ds-icon icon-name="sun" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="sm" color="warning"></ds-icon>
+
+            <ds-icon icon-name="moon" icon-size="sm" color="primary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="sm" color="secondary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="sm" color="success"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="sm" color="danger"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="sm" color="warning"></ds-icon>
+          </div>
+        </div>
+
+        <!-- MD -->
+        <div class="bg-white rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg">Medium Icons - md</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-icon icon-name="coffee" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="md" color="warning"></ds-icon>
+
+            <ds-icon icon-name="delete" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="md" color="warning"></ds-icon>
+
+            <ds-icon icon-name="arrow-right" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="md" color="warning"></ds-icon>
+
+            <ds-icon icon-name="like" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="like" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="like" icon-size="md" color="warning"></ds-icon>
+
+            <ds-icon icon-name="twitter" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="md" color="warning"></ds-icon>
+
+            <ds-icon icon-name="sun" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="md" color="warning"></ds-icon>
+
+            <ds-icon icon-name="moon" icon-size="md" color="primary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="md" color="secondary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="md" color="success"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="md" color="danger"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="md" color="warning"></ds-icon>
+          </div>
+        </div>
+
+        <!-- LG -->
+        <div class="bg-white rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg">Large Icons - lg</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-icon icon-name="coffee" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="coffee" icon-size="lg" color="warning"></ds-icon>
+
+            <ds-icon icon-name="delete" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="delete" icon-size="lg" color="warning"></ds-icon>
+
+            <ds-icon icon-name="arrow-right" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="arrow-right" icon-size="lg" color="warning"></ds-icon>
+
+            <ds-icon icon-name="like" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="like" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="like" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="like" icon-size="lg" color="warning"></ds-icon>
+
+            <ds-icon icon-name="twitter" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="twitter" icon-size="lg" color="warning"></ds-icon>
+
+            <ds-icon icon-name="sun" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="sun" icon-size="lg" color="warning"></ds-icon>
+
+            <ds-icon icon-name="moon" icon-size="lg" color="primary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="lg" color="secondary"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="lg" color="success"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="lg" color="danger"></ds-icon>
+            <ds-icon icon-name="moon" icon-size="lg" color="warning"></ds-icon>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Buttons ================= -->
+    <section class="space-y-10">
+      <h2 class="text-2xl font-semibold">Buttons</h2>
+
+      <div class="space-y-4">
+        <h3 class="font-medium">Buttons with text</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <ds-button radius="none">primary</ds-button>
+          <ds-button color="success" variant="soft">إضافة</ds-button>
+          <ds-button color="secondary" variant="link">عرض الكل</ds-button>
+          <ds-button color="success" variant="solid" size="lg">تأكيد</ds-button>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="font-medium">Buttons with icons</h3>
+        <div class="flex justify-center gap-4">
+          <ds-button variant="soft" size="xs"><ds-icon icon-name="coffee" icon-size="xs" color="defulte"></ds-icon></ds-button>
+          <ds-button variant="soft" size="xs"><ds-icon icon-name="coffee" icon-size="xs" color="primary"></ds-icon></ds-button>
+          <ds-button variant="soft" size="sm"><ds-icon icon-name="coffee" icon-size="sm" color="secondary"></ds-icon></ds-button>
+          <ds-button variant="soft" size="md"><ds-icon icon-name="coffee" icon-size="md" color="success"></ds-icon></ds-button>
+          <ds-button variant="soft" size="lg"><ds-icon icon-name="coffee" icon-size="lg" color="danger"></ds-icon></ds-button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

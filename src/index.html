@@ -11,6 +11,7 @@
   </head>
 
   <body class="text-center p-8 space-y-20">
+    <for-testing></for-testing>
     <!-- ================= Theme ================= -->
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold">Theme Switcher</h2>
@@ -24,7 +25,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- XS -->
         <div class="rounded-xl shadow p-6 space-y-4">
-          <p class="font-semibold text-lg"  style="color: var(--color-danger)" >Extra Small Icons - xs</p>
+          <p class="font-semibold text-lg" style="color: var(--color-danger)">Extra Small Icons - xs</p>
           <div class="grid grid-cols-5 gap-4 place-items-center">
             <!-- coffee -->
             <ds-icon icon-name="coffee" icon-size="xs" color="primary"></ds-icon>
@@ -218,7 +219,6 @@
             <ds-icon icon-name="moon" icon-size="lg" color="success"></ds-icon>
             <ds-icon icon-name="moon" icon-size="lg" color="danger"></ds-icon>
             <ds-icon icon-name="moon" icon-size="lg" color="warning"></ds-icon>
-
           </div>
         </div>
       </div>
@@ -228,13 +228,142 @@
     <section class="space-y-10">
       <h2 class="text-2xl font-semibold">Buttons</h2>
 
-      <div class="space-y-4">
-        <h3 class="font-medium">Buttons with text</h3>
-        <div class="flex flex-wrap justify-center gap-4">
-          <ds-button radius="none">primary</ds-button>
-          <ds-button color="success" variant="soft">إضافة</ds-button>
-          <ds-button color="secondary" variant="link">عرض الكل</ds-button>
-          <ds-button color="success" variant="solid" size="lg">تأكيد</ds-button>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg" style="color: var(--color-danger)">Buttons with text - xs</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-button variant="solid" color="primary" size="xs">primary</ds-button>
+            <ds-button variant="outline" color="primary" size="xs">primary</ds-button>
+            <ds-button variant="ghost" color="primary" size="xs">primary</ds-button>
+            <ds-button variant="soft" color="primary" size="xs">primary</ds-button>
+            <ds-button variant="link" color="primary" size="xs">primary</ds-button>
+
+            <ds-button variant="solid" color="secondary" size="xs">secondary</ds-button>
+            <ds-button variant="outline" color="secondary" size="xs">secondary</ds-button>
+            <ds-button variant="ghost" color="secondary" size="xs">secondary</ds-button>
+            <ds-button variant="soft" color="secondary" size="xs">secondary</ds-button>
+            <ds-button variant="link" color="secondary" size="xs">secondary</ds-button>
+
+            <ds-button variant="solid" color="success" size="xs">success</ds-button>
+            <ds-button variant="outline" color="success" size="xs">success</ds-button>
+            <ds-button variant="ghost" color="success" size="xs">success</ds-button>
+            <ds-button variant="soft" color="success" size="xs">success</ds-button>
+            <ds-button variant="link" color="success" size="xs">success</ds-button>
+
+            <ds-button variant="solid" color="danger" size="xs">danger</ds-button>
+            <ds-button variant="outline" color="danger" size="xs">danger</ds-button>
+            <ds-button variant="ghost" color="danger" size="xs">danger</ds-button>
+            <ds-button variant="soft" color="danger" size="xs">danger</ds-button>
+            <ds-button variant="link" color="danger" size="xs">danger</ds-button>
+
+            <ds-button variant="solid" color="warning" size="xs">warning</ds-button>
+            <ds-button variant="outline" color="warning" size="xs">warning</ds-button>
+            <ds-button variant="ghost" color="warning" size="xs">warning</ds-button>
+            <ds-button variant="soft" color="warning" size="xs">warning</ds-button>
+            <ds-button variant="link" color="warning" size="xs">warning</ds-button>
+          </div>
+        </div>
+        <div class="rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg" style="color: var(--color-danger)">Buttons with text - sm</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-button variant="solid" color="primary" size="sm">primary</ds-button>
+            <ds-button variant="outline" color="primary" size="sm">primary</ds-button>
+            <ds-button variant="ghost" color="primary" size="sm">primary</ds-button>
+            <ds-button variant="soft" color="primary" size="sm">primary</ds-button>
+            <ds-button variant="link" color="primary" size="sm">primary</ds-button>
+
+            <ds-button variant="solid" color="secondary" size="sm">secondary</ds-button>
+            <ds-button variant="outline" color="secondary" size="sm">secondary</ds-button>
+            <ds-button variant="ghost" color="secondary" size="sm">secondary</ds-button>
+            <ds-button variant="soft" color="secondary" size="sm">secondary</ds-button>
+            <ds-button variant="link" color="secondary" size="sm">secondary</ds-button>
+
+            <ds-button variant="solid" color="success" size="sm">success</ds-button>
+            <ds-button variant="outline" color="success" size="sm">success</ds-button>
+            <ds-button variant="ghost" color="success" size="sm">success</ds-button>
+            <ds-button variant="soft" color="success" size="sm">success</ds-button>
+            <ds-button variant="link" color="success" size="sm">success</ds-button>
+
+            <ds-button variant="solid" color="danger" size="sm">danger</ds-button>
+            <ds-button variant="outline" color="danger" size="sm">danger</ds-button>
+            <ds-button variant="ghost" color="danger" size="sm">danger</ds-button>
+            <ds-button variant="soft" color="danger" size="sm">danger</ds-button>
+            <ds-button variant="link" color="danger" size="sm">danger</ds-button>
+
+            <ds-button variant="solid" color="warning" size="sm">warning</ds-button>
+            <ds-button variant="outline" color="warning" size="sm">warning</ds-button>
+            <ds-button variant="ghost" color="warning" size="sm">warning</ds-button>
+            <ds-button variant="soft" color="warning" size="sm">warning</ds-button>
+            <ds-button variant="link" color="warning" size="sm">warning</ds-button>
+          </div>
+        </div>
+        <div class="rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg" style="color: var(--color-danger)">Buttons with text - md</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-button variant="solid" color="primary" size="md">primary</ds-button>
+            <ds-button variant="outline" color="primary" size="md">primary</ds-button>
+            <ds-button variant="ghost" color="primary" size="md">primary</ds-button>
+            <ds-button variant="soft" color="primary" size="md">primary</ds-button>
+            <ds-button variant="link" color="primary" size="md">primary</ds-button>
+
+            <ds-button variant="solid" color="secondary" size="md">secondary</ds-button>
+            <ds-button variant="outline" color="secondary" size="md">secondary</ds-button>
+            <ds-button variant="ghost" color="secondary" size="md">secondary</ds-button>
+            <ds-button variant="soft" color="secondary" size="md">secondary</ds-button>
+            <ds-button variant="link" color="secondary" size="md">secondary</ds-button>
+
+            <ds-button variant="solid" color="success" size="md">success</ds-button>
+            <ds-button variant="outline" color="success" size="md">success</ds-button>
+            <ds-button variant="ghost" color="success" size="md">success</ds-button>
+            <ds-button variant="soft" color="success" size="md">success</ds-button>
+            <ds-button variant="link" color="success" size="md">success</ds-button>
+
+            <ds-button variant="solid" color="danger" size="md">danger</ds-button>
+            <ds-button variant="outline" color="danger" size="md">danger</ds-button>
+            <ds-button variant="ghost" color="danger" size="md">danger</ds-button>
+            <ds-button variant="soft" color="danger" size="md">danger</ds-button>
+            <ds-button variant="link" color="danger" size="md">danger</ds-button>
+
+            <ds-button variant="solid" color="warning" size="md">warning</ds-button>
+            <ds-button variant="outline" color="warning" size="md">warning</ds-button>
+            <ds-button variant="ghost" color="warning" size="md">warning</ds-button>
+            <ds-button variant="soft" color="warning" size="md">warning</ds-button>
+            <ds-button variant="link" color="warning" size="md">warning</ds-button>
+          </div>
+        </div>
+        <div class="rounded-xl shadow p-6 space-y-4">
+          <p class="font-semibold text-lg" style="color: var(--color-danger)">Buttons with text - lg</p>
+          <div class="grid grid-cols-5 gap-4 place-items-center">
+            <ds-button variant="solid" color="primary" size="lg">primary</ds-button>
+            <ds-button variant="outline" color="primary" size="lg">primary</ds-button>
+            <ds-button variant="ghost" color="primary" size="lg">primary</ds-button>
+            <ds-button variant="soft" color="primary" size="lg">primary</ds-button>
+            <ds-button variant="link" color="primary" size="lg">primary</ds-button>
+
+            <ds-button variant="solid" color="secondary" size="lg">secondary</ds-button>
+            <ds-button variant="outline" color="secondary" size="lg">secondary</ds-button>
+            <ds-button variant="ghost" color="secondary" size="lg">secondary</ds-button>
+            <ds-button variant="soft" color="secondary" size="lg">secondary</ds-button>
+            <ds-button variant="link" color="secondary" size="lg">secondary</ds-button>
+
+            <ds-button variant="solid" color="success" size="lg">success</ds-button>
+            <ds-button variant="outline" color="success" size="lg">success</ds-button>
+            <ds-button variant="ghost" color="success" size="lg">success</ds-button>
+            <ds-button variant="soft" color="success" size="lg">success</ds-button>
+            <ds-button variant="link" color="success" size="lg">success</ds-button>
+
+            <ds-button variant="solid" color="danger" size="lg">danger</ds-button>
+            <ds-button variant="outline" color="danger" size="lg">danger</ds-button>
+            <ds-button variant="ghost" color="danger" size="lg">danger</ds-button>
+            <ds-button variant="soft" color="danger" size="lg">danger</ds-button>
+            <ds-button variant="link" color="danger" size="lg">danger</ds-button>
+
+            <ds-button variant="solid" color="warning" size="lg">warning</ds-button>
+            <ds-button variant="outline" color="warning" size="lg">warning</ds-button>
+            <ds-button variant="ghost" color="warning" size="lg">warning</ds-button>
+            <ds-button variant="soft" color="warning" size="lg">warning</ds-button>
+            <ds-button variant="link" color="warning" size="lg">warning</ds-button>
+          </div>
         </div>
       </div>
 

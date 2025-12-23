@@ -9,33 +9,72 @@ export class ForTesting {
   render() {
     return (
       <div>
-        <ds-button>
-        <ds-icon iconName="moon" iconSize="lg" color="danger"></ds-icon>
+            <section>
+      <h1>🎨 Design System – Colors</h1>
 
-        </ds-button>
-        <ds-icon iconName="coffee" iconSize="xs" color="secondary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="xs" color="success"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="xs" color="danger"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="xs" color="warning"></ds-icon>
+      <h2>Brand / Status</h2>
+      <div class="grid">
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-primary)' }}></div>
+          <div class="name">Primary</div>
+          <div class="var">--color-primary</div>
+        </div>
 
-        <ds-icon iconName="coffee" iconSize="sm" color="primary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="sm" color="secondary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="sm" color="success"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="sm" color="danger"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="sm" color="warning"></ds-icon>
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-secondary)' }}></div>
+          <div class="name">Secondary</div>
+          <div class="var">--color-secondary</div>
+        </div>
 
-        <ds-icon iconName="coffee" iconSize="md" color="primary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="md" color="secondary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="md" color="success"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="md" color="danger"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="md" color="warning"></ds-icon>
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-success)' }}></div>
+          <div class="name">Success</div>
+          <div class="var">--color-success</div>
+        </div>
 
-        <ds-icon iconName="coffee" iconSize="lg" color="primary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="lg" color="secondary"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="lg" color="success"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="lg" color="danger"></ds-icon>
-        <ds-icon iconName="coffee" iconSize="lg" color="warning"></ds-icon>
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-danger)' }}></div>
+          <div class="name">Danger</div>
+          <div class="var">--color-danger</div>
+        </div>
 
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-warning)' }}></div>
+          <div class="name">Warning</div>
+          <div class="var">--color-warning</div>
+        </div>
+      </div>
+
+      <h2>Text</h2>
+      <div class="grid">
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-fg-default)' }}></div>
+          <div class="name">FG Default</div>
+          <div class="var">--color-fg-default</div>
+        </div>
+
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-fg-muted)' }}></div>
+          <div class="name">FG Muted</div>
+          <div class="var">--color-fg-muted</div>
+        </div>
+      </div>
+
+      <h2>Surfaces</h2>
+      <div class="grid">
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-bg-body)' }}></div>
+          <div class="name">Body</div>
+          <div class="var">--color-bg-body</div>
+        </div>
+
+        <div class="color-card">
+          <div class="swatch" style={{ background: 'var(--color-bg-surface)' }}></div>
+          <div class="name">Surface</div>
+          <div class="var">--color-bg-surface</div>
+        </div>
+      </div>
+    </section>
 
       </div>
     );

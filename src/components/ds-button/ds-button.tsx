@@ -9,7 +9,7 @@ import type { AppColor, AppRadius, AppSize } from '../../design-system/theme';
 export class DsButton {
   @Prop() color: AppColor = 'primary';
   @Prop() size: AppSize = 'md';
-  @Prop() variant: 'solid' | 'outline' | 'ghost' | 'soft' | 'link' = 'solid';
+  @Prop() variant: 'solid' | 'outline' | 'ghost' | 'soft' | 'link' = 'solid'; 
   @Prop() disabled = false;
   @Prop() type: 'button' | 'submit' | 'reset' = 'button';
   @Prop() radius: AppRadius = 'md';

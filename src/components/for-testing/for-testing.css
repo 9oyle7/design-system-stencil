@@ -1,3 +1,44 @@
 :host {
   display: block;
 }
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg-body);
+  color: var(--color-fg-default);
+  padding: 2rem;
+}
+
+h2 {
+  margin: 2rem 0 1rem;
+  font-weight: var(--fw-semibold);
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-card {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 1rem;
+}
+
+.swatch {
+  height: 48px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+}
+
+.name {
+  font-weight: var(--fw-medium);
+  font-size: 0.875rem;
+}
+
+.var {
+  font-size: 0.75rem;
+  color: var(--color-fg-muted);
+}

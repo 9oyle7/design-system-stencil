@@ -13,7 +13,7 @@ export class ForTesting {
       <h1>🎨 Design System – Colors</h1>
 
       <h2>Brand / Status</h2>
-      <div class="grid">
+      <div class="flex">
         <div class="color-card">
           <div class="swatch" style={{ background: 'var(--color-primary)' }}></div>
           <div class="name">Primary</div>
@@ -46,7 +46,7 @@ export class ForTesting {
       </div>
 
       <h2>Text</h2>
-      <div class="grid">
+      <div class="flex">
         <div class="color-card">
           <div class="swatch" style={{ background: 'var(--color-fg-default)' }}></div>
           <div class="name">FG Default</div>
@@ -61,7 +61,7 @@ export class ForTesting {
       </div>
 
       <h2>Surfaces</h2>
-      <div class="grid">
+      <div class="flex">
         <div class="color-card">
           <div class="swatch" style={{ background: 'var(--color-bg-body)' }}></div>
           <div class="name">Body</div>
